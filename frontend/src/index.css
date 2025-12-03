@@ -1,0 +1,256 @@
+* {
+  box-sizing: border-box;
+}
+
+/* Fun pastel theme */
+body {
+  margin: 0;
+  font-family: Georgia, "Times New Roman", serif;
+  background: #fff6fb; /* light pink */
+  color: #3f3f46;      /* dark gray for readability * / 
+  font-size: 18px;
+}
+
+/* Main container */
+.app-root {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 2rem 1rem 4rem;
+}
+
+/* Typography */
+h1, h2, h3 {
+  margin: 0;
+  color: #3b0764; /* deep plum for headings */
+}
+
+h1 {
+  font-size: 3.2rem;
+  margin-bottom: 0.5rem;
+  letter-spacing: 0.02em;
+}
+
+h2 {
+  font-size: 1.7rem; /* chart titles larger */
+}
+
+.subtitle {
+  color: #6b7280;
+  margin-bottom: 1.5rem;
+  max-width: 850px;
+  font-size: 1.2rem;
+  line-height: 1.6;
+}
+
+
+.helper-text {
+  font-size: 0.9rem;
+  margin-bottom: 0.7rem;
+}
+
+.stat-value {
+  font-size: 1.15rem;
+}
+
+
+/* Card containers */
+.card {
+  padding: 1.8rem;
+  background: #fff7fb; /* very light pink */
+  border-radius: 1.2rem;
+  padding: 1.4rem;
+  box-shadow: 0 12px 30px rgba(244, 114, 182, 0.25); /* soft pink shadow */
+  border: 1px solid #f9a8d4;
+}
+
+.filters-row {
+  gap: 1.1rem;
+}
+
+.mood-button {
+  padding: 0.55rem 1.1rem;
+  font-size: 0.95rem;
+}
+
+/* Layout */
+.layout-grid {
+  display: grid;
+  gap: 1.25rem;
+}
+
+@media (min-width: 900px) {
+  .layout-grid.two {
+    grid-template-columns: 1.1fr 0.9fr;
+  }
+  .layout-grid.equal {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/* Filters */
+.filters-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.filter-group label {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #6b7280;
+  display: block;
+  margin-bottom: 0.25rem;
+}
+
+.filter-group select,
+.filter-group input[type="number"] {
+  background: #fef9ff;
+  border: 1px solid #f9a8d4;
+  border-radius: 0.6rem;
+  color: #374151;
+  padding: 0.4rem 0.7rem;
+  font-size: 0.85rem;
+}
+
+/* Mood buttons */
+.mood-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+.mood-button {
+  border-radius: 999px;
+  padding: 0.35rem 0.9rem;
+  border: 1px solid #f9a8d4;
+  background: #fdf2ff;
+  color: #4b5563;
+  font-size: 0.8rem;
+  cursor: pointer;
+}
+
+.mood-button.active {
+  background: linear-gradient(135deg, #f9a8d4, #bfdbfe); /* pastel pink → pastel blue */
+  border-color: transparent;
+  color: #1f2933;
+}
+
+/* Tag at the top */
+.meta-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  padding: 0.3rem 0.9rem;
+  font-size: 0.75rem;
+  border-radius: 999px;
+  background: #fef3ff;
+  border: 1px solid #f9a8d4;
+  color: #6b21a8;
+  margin-bottom: 0.75rem;
+}
+
+/* Insight list */
+.insights-list {
+  list-style: none;
+  padding-left: 1rem;
+  margin: 0.75rem 0 0;
+}
+
+.insights-list li {
+  margin-bottom: 0.35rem;
+  font-size: 0.9rem;
+  color: #374151;
+}
+
+/* Footer */
+footer {
+  color: #6b7280;
+}
+
+/* Small helper text */
+.helper-text {
+  font-size: 0.8rem;
+  color: #6b7280;
+  margin-bottom: 0.75rem;
+}
+
+/* Stats strip for summary metrics */
+.stats-strip {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.stat-pill {
+  flex: 1 1 150px;
+  min-width: 150px;
+  padding: 0.6rem 0.9rem;
+  border-radius: 0.9rem;
+  background: #ffe4f1;
+  border: 1px solid #f9a8d4;
+  font-size: 0.85rem;
+}
+
+.stat-label {
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 0.7rem;
+  color: #9f1239;
+}
+
+.stat-value {
+  font-size: 1.05rem;
+  margin-top: 0.15rem;
+  color: #4b5563;
+}
+
+/* Three-column viz grid */
+.viz-grid {
+  display: grid;
+  gap: 1.1rem;
+}
+
+@media (min-width: 1024px) {
+  .viz-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+.helper-text {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1.15rem;     /* instruction sentence bigger */
+  line-height: 1.6;
+  color: #9f1239;
+  margin-bottom: 1.2rem;
+}
+
+/* Filter headings like "Filters", "Popularity range", etc */
+.filter-group label {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #7a1b46;
+  letter-spacing: 0.05em;
+}
+
+/* Dropdowns and number inputs */
+.filter-group select,
+.filter-group input[type="number"] {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1.05rem;
+  padding: 0.5rem 0.85rem;
+}
+
+/* The 'to' separator between range inputs */
+.filter-group span {
+  font-size: 1.05rem;
+}
+
+/* Mood quadrant filter buttons */
+.mood-button {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1rem;
+  padding: 0.55rem 1.15rem;
+}
